@@ -1,0 +1,63 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 94f2cc24c586db57483236c41a9cc539e0701f680cf31a49513b4f2d681de89e
+
+name:           CalcuHask
+version:        0.1.0.0
+synopsis:       Short description of your package
+description:    Please see the README on Github at <https://github.com/githubuser/CalcuHask#readme>
+homepage:       https://github.com/githubuser/CalcuHask#readme
+bug-reports:    https://github.com/githubuser/CalcuHask/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2017 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/CalcuHask
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_CalcuHask
+  default-language: Haskell2010
+
+executable CalcuHask-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      CalcuHask
+    , base >=4.7 && <5
+  other-modules:
+      Paths_CalcuHask
+  default-language: Haskell2010
+
+test-suite CalcuHask-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      CalcuHask
+    , base >=4.7 && <5
+  other-modules:
+      Paths_CalcuHask
+  default-language: Haskell2010
